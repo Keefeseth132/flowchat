@@ -15,7 +15,7 @@
   <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center">
-  	  <img class="" src="images/flowchat-full.png">
+  	  <img src="images/flowchat-full.png">
     </div>
   </div>
 
@@ -56,11 +56,29 @@
 
 <template name="chatPage">
   <div id="chat-background">
-    <div class="row">
-	    <div class="col-sm-3 col-sm-offset-3">
-        <div class="chatBox"></div>
+    <div class="row" id="margin-fix">
+	    <div class="col-sm-8 col-sm-offset-2">
+        <img id="chat-logo" src="images/flowchat-full.png">
+        <div id="logout-button">
+          <button id="logout">Logout</button>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-3 users">
+            <div class="border-control">
+              <p>this is content</p>
+            </div>
+          </div>
+          <div class="col-sm-9 chatBox">
+            <form>
+              <input type="text" name="message-box">
+              <input type="submit" value="send">
+            </form>
+          </div>
+        </div>
+
       </div>
+
     </div>
-	<p><a href="#" class="logout">Logout</a></p>
   </div>
 </template>

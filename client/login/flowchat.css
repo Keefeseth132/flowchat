@@ -76,7 +76,40 @@ html, body {
 
 .chatBox {
 	background-color: rgba(160, 160, 160, .4);
+	/*text-align: center;*/
+	height: 400px;
+}
+
+#chat-logo {
+	width: 150px;
+	height: 100px;
+}
+
+#logout-button {
+	text-align: right;
+}
+
+#logout {
+	background-color: transparent;
+	border-radius: none;
+	border: 1px solid white;
+	color: white;
+	width: 100px;
+	height: 30px;
 	text-align: center;
-	width: 400px;
-	height: 300px;
+}
+
+.users {
+	background-color: rgba(160, 160, 160, .4);
+	height: 400px;
+}
+
+.border-control {
+	height: 95%;
+	border-right: 1px solid white;
+	margin: 10px 0px;
+}
+
+#margin-fix {
+	margin: 0;
 }
