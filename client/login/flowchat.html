@@ -1,0 +1,66 @@
+<head>
+<title>flowchat</title>
+</head>
+
+<body>
+  {{#if currentUser}}
+  {{> chatPage}}
+  {{else}}
+  {{> loginPage}}
+  {{/if}}
+</body>
+
+<template name="loginPage">
+  <div id="login-background">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+  	  <img class="" src="images/flowchat-full.png">
+    </div>
+  </div>
+
+  <div class="row">
+  	<!-- <div class="col-sm-12"> -->
+  	<div class="col-sm-3 col-sm-offset-3">
+  	  <div class="signin">
+	      <h3 class="login-title">Sign in to Chat</h3>
+	      <form class="login-form" id="login">
+	      	<!-- <label for="login-username">Username</label> -->
+	      	<input id="login-username" type="text" name="username" placeholder="Username">
+	      	<!-- <label for="login-password">Password</label> -->
+	      	<input id="login-password" type="text" name="password" placeholder="Password">
+	      	<input type="submit" value="Sign In">
+	      	<input type="checkbox" name="checked-signin">Keep Me Signed In
+	      </form>
+      </div>
+  	</div>
+  	
+  	<div class="col-sm-3">
+      <div class="signin">
+	  	  <h3 class="login-title">New User?</h3>
+	  	  <form class="login-form" id="register">
+	  	    <!-- <label for="login-username">Create Your Username</label> -->
+	  	    <input id="login-username" type="text" name="regUsername" placeholder="Username">
+	  	    <!-- <label for="login-password">Choose a Password</label> -->
+	  	    <input id="login-password" type="text" name="regPassword" placeholder="Password">
+	  	    <input type="submit" value="register">
+	  	    <input type="checkbox" name="checked-signin">Remember Me
+	  	  </form>
+  	  </div>
+  	</div>
+  <!-- </div> -->
+  </div>
+  </div>
+  </div>
+</template>
+
+<template name="chatPage">
+  <div id="chat-background">
+    <div class="row">
+	    <div class="col-sm-3 col-sm-offset-3">
+        <div class="chatBox"></div>
+      </div>
+    </div>
+	<p><a href="#" class="logout">Logout</a></p>
+  </div>
+</template>
