@@ -5,6 +5,7 @@
 <body>
   {{#if currentUser}}
   {{> chatPage}}
+  {{> messages}}
   {{else}}
   {{> loginPage}}
   {{/if}}
@@ -70,15 +71,21 @@
             </div>
           </div>
           <div class="col-sm-9 chatBox">
-            <form>
-              <input type="text" name="message-box">
-              <input type="submit" value="send">
+            <form class="message-form">
+              <input id="message-box" type="text" name="message-box">
+              <input id="message-send" type="submit" value="send">
             </form>
           </div>
         </div>
-
       </div>
-
     </div>
+  </div>
+</template>
+
+<template name="messages">
+  <div id="chats" class="chat">
+    {{#each messages}}
+      <span class="username">{{name}}: </span> {{message}} <br>
+    {{/each}}
   </div>
 </template>

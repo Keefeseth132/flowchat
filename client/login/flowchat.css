@@ -113,3 +113,17 @@ html, body {
 #margin-fix {
 	margin: 0;
 }
+
+#message-box {
+	width: 80%;
+	height: 30px;
+}
+
+#message-send {
+	width: 15%;
+	height: 30px;
+}
+
+.message-form {
+	vertical-align: bottom;
+}
